@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+ body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Golos Text', sans-serif;
+ }
+
+.wrapper {
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.space_jam {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.allsection {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.first_stroke{
+    border-top: 1px solid #a6a6a6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+    transition: all 0.3s ease 0s;
+}
+
+.img_inner {
+    display: flex;
+    justify-content: center;
+   height: 250px;
+    max-height: 0;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.3s ease 0s;
+    margin-bottom: 10px;
+}
+
+.img_inner img{
+    height: 250px;
+    max-height: 30%;
+}
+
+.fa-circle-plus {
+    transition: all 0.6s ease 0s;
+}
+
+.fa-circle-plus:not(:hover) {
+    opacity: 0;
+}
+
+.fa-circle-plus:hover {
+   font-size: 26px;
+}
+
+.section1:hover .fa-circle-plus, .section2:hover .fa-circle-plus, .section3:hover .fa-circle-plus, .section4:hover .fa-circle-plus, .section5:hover .fa-circle-plus{  
+    opacity: 1;
+    transform: rotate(405deg);
+    color: blue;
+    transition: all 0.6s ease 0s;
+}
+
+.section1:hover .first, .section2:hover .first, .section3:hover .first, .section4:hover .first, .section5:hover .first {  
+    color: blue;
+    transition: all 0.3s ease 0s;
+    opacity: 1;
+}
+
+.section1:hover  .img_inner, .section2:hover .img_inner, .section3:hover .img_inner, .section4:hover .img_inner, .section5:hover .img_inner {
+    opacity: 1;
+    max-height: 100%;
+    transform: scale(1);
+    transition: all 0.3s ease 0s;
+    height: 100%;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label>.img_inner{
+    opacity: 1;
+    max-height: 100%;
+    transform: scale(1);
+    transition: all 0.3s ease 0s;
+    height: 100%;
+    cursor: pointer;
+}
+
+input:checked + label>.first_stroke>.fa-circle-plus::before {
+    transform: rotate(45deg);
+    transition: all 0.3s ease 0s;
+}
+
+.allsection:hover * {
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+.section1:active, .section2:active, .section3:active, .section4:active, .section5:active{
+opacity: 0.5;
+transition: all 0.3s ease 0s;
+cursor: pointer;
+}
